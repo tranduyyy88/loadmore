@@ -3,12 +3,13 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { map } from "rxjs/operators";
 const Content = () => {
-  const [data, setData] = useState({});
+  const [data, setData] = useState([]);
   useEffect(() => {
     axios
       .get("https://jsonplaceholder.typicode.com/posts")
       .then(function (response) {
         console.log(response.data);
+        //set data 
       })
       .catch(function (error) {})
       .then(function () {
